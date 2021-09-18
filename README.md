@@ -17,7 +17,9 @@ Textures
 --------
 
 CC BY-SA 4.0: Copyright (c) 2021 SFENCE
-  
+  * garden_trowel_trowel_prism.png
+
+CC BY-SA 4.0: Copyright (c) 2021 Sinki
   * others
 
 

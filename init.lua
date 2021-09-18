@@ -55,42 +55,36 @@ end
 local trowels = {
   wood = {
     desc = "Wooden",
-    handle = "wood",
     handle_mat = "group:stick",
     body_mat = "group:wood",
     _trowel_wear = 6000,
   },
   stone = {
     desc = "Stone",
-    handle = "wood",
     handle_mat = "group:stick",
     body_mat = "group:stone",
     _trowel_wear = 3000,
   },
   bronze = {
     desc = "Bronze",
-    handle = "wood",
     handle_mat = "group:stick",
     body_mat = "hades_core:bronze_ingot",
     _trowel_wear = 2000,
   },
-  iron = {
+  steel = {
     desc = "Iron",
-    handle = "wood",
     handle_mat = "group:stick",
     body_mat = "hades_core:steel_ingot",
     _trowel_wear = 1500,
   },
   prism = {
     desc = "Prism",
-    handle = "iron",
     handle_mat = "hades_core:steel_ingot",
     body_mat = "hades_core:prismatic_gem",
     _trowel_wear = 600,
   },
   mese = {
     desc = "Mese",
-    handle = "iron",
     handle_mat = "hades_core:steel_ingot",
     body_mat = "hades_core:mese_crystal",
     _trowel_wear = 200,
@@ -100,7 +94,8 @@ local trowels = {
 for material, data in pairs(trowels) do
   minetest.register_tool("hades_garden_trowel:trowel_"..material, {
       description = S(data.desc.." Garden Trowel"),
-      inventory_image = "garden_trowel_trowel_head_"..material..".png^garden_trowel_trowel_handle_"..data.handle..".png",
+      inventory_image = "garden_trowel_trowel_"..material..".png",
+      wield_image = "garden_trowel_trowel_"..material..".png^[transformR270",
       sound = {breaks = "default_tool_breaks"},
       groups = {trowel = 1},
       _trowel_wear = data._trowel_wear,
